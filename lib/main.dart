@@ -1,5 +1,5 @@
 import 'package:blocmarket/bloc/product_bloc.dart';
-import 'package:blocmarket/screens/home_screen.dart';
+import 'package:blocmarket/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.transparent),
           useMaterial3: true,
         ),
-        home: const HomeScreen(),
+        home: const TabBarMain(),
       ),
     );
   }

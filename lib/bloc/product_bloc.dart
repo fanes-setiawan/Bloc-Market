@@ -11,7 +11,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       emit(ProductLoading());
       final response =
           await http.get(Uri.parse('https://api.escuelajs.co/api/v1/products'));
-      emit(ProductSuccess(products: pproductModelFromJson(response.body)));
+      emit(ProductSuccess(products: productModelFromJson(response.body)));
     });
   }
 }

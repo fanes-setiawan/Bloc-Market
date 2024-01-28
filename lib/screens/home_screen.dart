@@ -12,21 +12,22 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selected = 0;
+  int productLength = 0;
   List<Map<String, dynamic>> menu = [
     {
-      'name': 'Semua',
+      'name': 'All',
     },
     {
-      'name': 'property',
+      'name': 'Clothes',
     },
     {
-      'name': 'elektronik',
+      'name': 'Electronics',
     },
     {
-      'name': 'promo 50%',
+      'name': 'Furniture',
     },
     {
-      'name': 'lainnya',
+      'name': 'Others',
     }
   ];
   @override
