@@ -1,4 +1,4 @@
-import 'package:blocmarket/models/product_model.dart';
+import 'package:blocmarket/data/models/response/product_model.dart';
 import 'package:blocmarket/screens/detail_product.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +17,9 @@ class ItemWidget extends StatelessWidget {
           );
         }));
       },
-      child: Container(
-        color: Colors.transparent,
-        padding: const EdgeInsets.all(10),
+      child: Card(
+        color: Colors.white,
+        shadowColor: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

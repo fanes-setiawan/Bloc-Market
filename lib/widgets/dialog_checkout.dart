@@ -2,25 +2,25 @@
 import 'package:flutter/material.dart';
 
 class DialogCheckOutWidget extends StatelessWidget {
-  String? title;
-  int? countItem;
-  String? address;
-  List? images;
-  String? phone;
-  String? owner;
-  String? payment;
-  String? totalPrice;
+  final String title;
+  final int countItem;
+  final String address;
+  final List<String> images;
+  final String phone;
+  final String owner;
+  final String payment;
+  final double totalPrice;
+
   DialogCheckOutWidget({
-    Key? key,
-    this.title,
-    this.countItem,
-    this.address,
-    this.images,
-    this.phone,
-    this.owner,
-    this.payment,
-    this.totalPrice,
-  }) : super(key: key);
+    required this.title,
+    required this.countItem,
+    required this.address,
+    required this.images,
+    required this.phone,
+    required this.owner,
+    required this.payment,
+    required this.totalPrice,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,9 @@ class DialogCheckOutWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       child: const Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -88,7 +90,7 @@ class DialogCheckOutWidget extends StatelessWidget {
                   height: 50,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: images!.length,
+                    itemCount: images.length,
                     physics: const ScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
@@ -103,7 +105,7 @@ class DialogCheckOutWidget extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
-                                images![index],
+                                images[index],
                               ),
                               fit: BoxFit.cover,
                             ),

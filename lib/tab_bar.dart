@@ -1,5 +1,8 @@
+import 'package:blocmarket/screens/chats_bloc_screen.dart';
 import 'package:blocmarket/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/profile_screen.dart';
 
 class TabBarMain extends StatefulWidget {
   const TabBarMain({super.key});
@@ -12,12 +15,8 @@ class _TabBarMainState extends State<TabBarMain> {
   int _selectedIndex = 0;
   final List<Widget> _pages = [
     const HomeScreen(),
-    const Center(
-      child: Text("Chat"),
-    ),
-    const Center(
-      child: Text("Profile"),
-    )
+    const ChatsBlocScreen(),
+    const ProfileScreen(),
   ];
   void _onItemTap(int index) {
     setState(() {

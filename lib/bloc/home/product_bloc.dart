@@ -1,4 +1,4 @@
-import 'package:blocmarket/models/product_model.dart';
+import 'package:blocmarket/data/models/response/product_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 part 'product_event.dart';

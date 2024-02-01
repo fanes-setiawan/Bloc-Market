@@ -1,7 +1,8 @@
-import 'package:blocmarket/models/product_model.dart';
+import 'package:blocmarket/data/models/response/product_model.dart';
 import 'package:blocmarket/widgets/dialog_checkout.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class DetailProductScreen extends StatefulWidget {
   final ProductModel productModel;
@@ -44,6 +45,17 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
             onPressed: () {},
             icon: const Icon(
               Icons.add_shopping_cart_outlined,
+              size: 24.0,
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              String productText = "widget.productModel.title";
+              print(productText);
+              Share.share(productText);
+            },
+            icon: const Icon(
+              Icons.reply_rounded,
               size: 24.0,
             ),
           ),
@@ -290,8 +302,8 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                           builder: (BuildContext context) {
                             return DialogCheckOutWidget(
                               countItem: count,
-                              totalPrice: (count * widget.productModel.price)
-                                  .toString(),
+                              totalPrice: double.parse(count.toString()) *
+                                  widget.productModel.price,
                               title: widget.productModel.title,
                               images: widget.productModel.images,
                               owner: "F**** S*******n",

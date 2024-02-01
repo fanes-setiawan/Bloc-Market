@@ -1,4 +1,4 @@
-import 'package:blocmarket/bloc/product_bloc.dart';
+import 'package:blocmarket/bloc/home/product_bloc.dart';
 import 'package:blocmarket/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -170,13 +170,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       );
                     }
-                    return const Expanded(
-                      child: Center(
-                        child: Text(
-                          "no data",
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
+                    return const Center(
+                      child: Text(
+                        "no data",
+                        style: TextStyle(
+                          fontSize: 10.0,
                         ),
                       ),
                     );
